@@ -1,0 +1,85 @@
+.container {
+  margin: auto;
+  max-width: 900px;
+  background-color: #bbc0c600;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h2 {
+  font-size: 1.8rem;
+  color: #ffffff; /* Dark gray for the title */
+  text-shadow:  0 4px 8px rgba(0, 0, 0, 10);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff; /* White background for the table */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #343a40; /* Dark gray for the header */
+    color: #fff; /* White text for header */
+    text-align: center;
+  }
+  
+  thead th {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  tbody tr {
+    transition: background-color 0.2s ease;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternating rows */
+  }
+  
+  tbody tr:hover {
+    background-color: #e9ecef; /* Light blue-gray on hover */
+  }
+  
+  td {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.95rem;
+    color: #343a40;
+  }
+  
+  /* Total Marks column styling */
+  tbody td:last-child {
+    font-weight: bold;
+    color: #007bff; /* Highlight total marks in blue */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #b52a36;
+    transform: scale(1.1);
+  }
+  
+  i {
+    margin-right: 5px;
+  }
+  

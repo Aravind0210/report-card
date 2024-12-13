@@ -1,0 +1,26 @@
+<app-dashboard-score></app-dashboard-score>
+<div class="container mt-4 bg-secondary">
+  <h2 class="text-center mb-4">Total Marks of Students</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Student Name</th>
+        <th>Gender</th>
+        <th>Math</th>
+        <th>English</th>
+        <th>Science</th>
+        <th>Total Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.name }}</td>
+        <td>{{ student.gender }}</td>
+        <td>{{ student.scores.math }}</td>
+        <td>{{ student.scores.english }}</td>
+        <td>{{ student.scores.science }}</td>
+        <td>{{ calculateTotalMarks(student) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

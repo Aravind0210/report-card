@@ -1,0 +1,37 @@
+<app-dashboard-score></app-dashboard-score>
+<div class="container mt-4 bg-secondary">
+  <h2 class="text-center mb-4">First Two Student with the Highest Score</h2>
+  
+  <table class="table table-bordered table-striped" *ngIf="highestScore.length; else nostudents ">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Math</th>
+        <th>English</th>
+        <th>Science</th>
+        <th>Total Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of highestScore">
+        <td>{{ student.name }}</td>
+        <td>{{ student.gender }}</td>
+        <td>{{ student.scores.math }}</td>
+        <td>{{ student.scores.english }}</td>
+        <td>{{ student.scores.science }}</td>
+        <td>{{ student.scores.math + student.scores.english + student.scores.science }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+ <ng-template #nostudents>
+  <p class="text-center fs-2">No students available!</p>
+
+ </ng-template>
+ 
+</div>
+
+   
+ 
+

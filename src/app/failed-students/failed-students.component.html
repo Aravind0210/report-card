@@ -1,0 +1,30 @@
+<app-dashboard-score></app-dashboard-score>
+<div class="container mt-4 bg-secondary">
+    <h2 class="text-center mb-4">Failed Students</h2>
+    <table class="table table-bordered table-striped" *ngIf="failedStudents.length > 0; else noFailures">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Math</th>
+          <th>English</th>
+          <th>Science</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of failedStudents">
+          <td>{{ student.name }}</td>
+          <td>{{ student.gender }}</td>
+          <td [class.text-danger]="student.scores.math < 40">{{ student.scores.math }}</td>
+          <td [class.text-danger]="student.scores.english < 40">{{ student.scores.english }}</td>
+          <td [class.text-danger]="student.scores.science < 40">{{ student.scores.science }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- No failed students -->
+    <ng-template #noFailures>
+      <p class="text-center fs-2">No students have failed!</p>
+    </ng-template>
+  </div>
+  

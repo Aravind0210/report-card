@@ -1,0 +1,26 @@
+<app-dashboard-score></app-dashboard-score>
+<div class="container mt-4 bg-secondary">
+  <h2 class="text-center mb-4">girls' Scores</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Math</th>
+        <th>English</th>
+        <th>Science</th>
+        <th>Total Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let girl of girls">
+        <td>{{ girl.name }}</td>
+        <td>{{ girl.scores.math }}</td>
+        <td>{{ girl.scores.english }}</td>
+        <td>{{ girl.scores.science }}</td>
+        <td>
+          {{ girl.scores.math + girl.scores.english + girl.scores.science }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

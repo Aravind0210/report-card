@@ -1,0 +1,26 @@
+<app-dashboard-score></app-dashboard-score>
+<div class="conatiner add-student-container">
+  <h2>Add New Student</h2>
+  <form (ngSubmit)="addStudent()" #studentForm="ngForm">
+    <label>Student Name</label>
+    <input type="text" [(ngModel)]="newStudent.name" name="name" required />
+    
+    <label>Gender</label>
+    <select [(ngModel)]="newStudent.gender" name="gender" required>
+      <option value="" disabled>Select Gender</option>
+      <option value="Boy">Boy</option>
+      <option value="Girl">Girl</option>
+    </select>
+    
+    <label>Math Score</label>
+    <input type="number" [(ngModel)]="newStudent.scores.math" name="math" required />
+    
+    <label>English Score</label>
+    <input type="number" [(ngModel)]="newStudent.scores.english" name="english" required />
+    
+    <label>Science Score</label>
+    <input type="number" [(ngModel)]="newStudent.scores.science" name="science" required />
+    
+    <button type="submit" [disabled]="!studentForm.valid">Add Student</button>
+  </form>
+</div>

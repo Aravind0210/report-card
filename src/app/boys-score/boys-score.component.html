@@ -1,0 +1,29 @@
+<app-dashboard-score></app-dashboard-score>
+<div class="container mt-4 bg-secondary">
+  
+  <h2 class="text-center mb-4">Boys' Scores</h2>
+  
+  
+    <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Math</th>
+        <th>English</th>
+        <th>Science</th>
+        <th>Total Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let boy of boys">
+        <td >{{ boy.name }}</td>
+        <td [ngClass]="{'text-danger':boy.scores.math < 40}">{{ boy.scores.math }}</td>
+        <td [ngClass]="{'text-danger':boy.scores.english < 40}">{{ boy.scores.english }}</td>
+        <td [ngClass]="{'text-danger':boy.scores.science < 40}">{{ boy.scores.science }}</td>
+        <td>
+          {{ boy.scores.math + boy.scores.english + boy.scores.science }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

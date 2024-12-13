@@ -1,0 +1,82 @@
+/* Container Styling */
+.add-student-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.add-student-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* Label Styling */
+.add-student-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input and Select Styling */
+.add-student-container input,
+.add-student-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.add-student-container input:focus,
+.add-student-container select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.add-student-container button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-student-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-student-container button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .add-student-container {
+    padding: 15px;
+  }
+
+  .add-student-container h2 {
+    font-size: 1.5rem;
+  }
+}
